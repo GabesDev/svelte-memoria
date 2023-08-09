@@ -144,12 +144,14 @@
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		gap: 0.4rem;
+		width: 85vw;
+		max-width: 750px;
 	}
 
 	.card {
-		height: 140px;
-		width: 140px;
-		font-size: 4rem;
+		aspect-ratio: 1 / 1;
+		width: 100%;
+    font-size: clamp(2rem, 7vw, 4rem);
 		background-color: var(--bg-2);
 		transition: rotate 0.3s ease-out;
 		transform-style: preserve-3d;
@@ -182,7 +184,7 @@
 		display: flex;
 		gap: 1rem;
 		margin-block: 2rem;
-		font-size: 3rem;
+    font-size: clamp(1.5rem, 4.75vw, 3rem);
 	}
 
 	.timer {
