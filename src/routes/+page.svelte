@@ -95,6 +95,8 @@
 
 <svelte:window on:keydown={pauseGame} />
 
+<a href="https://gabes.dev/" class="link">Gabes.dev</a>
+
 {#if state == 'paused'}
 	<h1>Jogo pausado</h1>
 {/if}
@@ -142,20 +144,36 @@
 <style>
 	.cards {
 		display: grid;
-		grid-template-columns: repeat(5, 1fr);
 		gap: 0.4rem;
+		grid-template-columns: repeat(5, 1fr);
 		width: 85vw;
 		max-width: 750px;
 	}
 
+	.link {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: max-content;
+		margin: 2rem;
+		padding: 0.5rem;
+		background: none;
+		border: 2px solid var(--border);
+		border-radius: 8px;
+		font-size: clamp(1rem, 3.5vw, 1.5rem);
+		font-weight: 900;
+		color: inherit;
+		text-decoration: none;
+	}
+
 	.card {
 		aspect-ratio: 1 / 1;
-		width: 100%;
-    font-size: clamp(2rem, 7vw, 4rem);
-		background-color: var(--bg-2);
-		transition: rotate 0.3s ease-out;
 		transform-style: preserve-3d;
-
+		width: 100%;
+		transition: rotate 0.3s ease-out;
+		background-color: var(--bg-2);
+		font-size: clamp(2rem, 7vw, 4rem);
+		
 		&.selected {
 			border: 4px solid var(--border);
 		}
@@ -166,25 +184,25 @@
 		}
 
 		& .back {
-			position: absolute;
 			inset: 0;
-			display: grid;
 			place-content: center;
 			backface-visibility: hidden;
 			rotate: y 180deg;
+			display: grid;
+			position: absolute;
 		}
 
 		& .match {
-			transition: opacity 0.3 ease-out;
 			opacity: 0.4;
+			transition: opacity 0.3 ease-out;
 		}
 	}
 
 	.matches {
+		margin-block: 2rem;
 		display: flex;
 		gap: 1rem;
-		margin-block: 2rem;
-    font-size: clamp(1.5rem, 4.75vw, 3rem);
+		font-size: clamp(1.5rem, 4.75vw, 3rem);
 	}
 
 	.timer {
@@ -192,8 +210,8 @@
 	}
 
 	.pulse {
-		color: var(--pulse);
 		animation: pulse 1s infinite ease;
+		color: var(--pulse);
 	}
 
 	@keyframes pulse {
