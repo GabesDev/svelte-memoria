@@ -1,5 +1,7 @@
 # Jogo da memória em Svelte 😃 == 😃
 
+![Screenshot](static/images/screenshot.png)
+
 [![Button Icon]][Link] 
 
 Jogo de memória simples para praticar um pouco de Svelte.
