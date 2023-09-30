@@ -1,6 +1,6 @@
 # Jogo da memória em Svelte 😃 == 😃
 
-![Screenshot](static/images/screenshot.png)
+![Screenshot](static/screenshot.png)
 
 [![Button Icon]][Link] 
 
