@@ -11,5 +11,5 @@ Jogo de memória simples para praticar um pouco de Svelte.
 - Reactivity
 
 
-[Button Icon]: https://img.shields.io/badge/ACESSAR-memoria.gabes.dev-blue
-[Link]: https://memoria.gabes.dev/ 'Jogo da memória'
+[Button Icon]: https://img.shields.io/badge/ACESSAR-memory.gabes.dev-blue
+[Link]: https://memory.gabes.dev/ 'Jogo da memória'
